@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,eAAe,CAAC;EACZ,KAAK,EAAE,qBAAqB;CAC/B",
+    "sources": [
+        "../scss/single-origin.scss"
+    ],
+    "names": [],
+    "file": "single-origin.css"
+}

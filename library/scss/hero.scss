@@ -1,0 +1,92 @@
+@import "partials/variables";
+@import "partials/mixins";
+
+.bcg-wall {
+    background-color: $light-gray;
+    box-shadow: 1px 1px 50px $med-gray;
+    width: 100vw;
+    padding-bottom: 15px;
+    background-size: cover;
+    @media only screen and (min-width: 768px) {
+        padding-bottom: 30px;
+    
+    }
+}
+
+.hooper {
+    height: 400px;
+    @media screen and (max-width: 560px) {
+        height: 210px;
+    }
+}
+
+.hero-img-wrapper {
+    position: relative;
+    width: 100vw;
+    max-width: 1280px;
+    margin: auto;
+    #slider {
+        width: 100vw;
+        max-width: 1280px;
+        height: 400px;
+        overflow: hidden;
+        @media screen and (max-width: 560px) {
+            height: 210px;
+        }
+        .slides {
+            display: block;
+            height: 400px;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            @media screen and (max-width: 560px) {
+                height: 210px;
+            }
+            .slide {
+                img {
+                    width: 100vw;
+                    max-width: 1280px;
+                    height: 400px;
+                    object-fit: cover;
+                    @media screen and (max-width: 560px) {
+                        height: 210px;
+                    }
+                }
+            }
+        }
+    }
+    .hero-description {
+        position: absolute;
+        top: 60px;
+        left: 150px;
+        right: 150px;
+        bottom: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        @media screen and (max-width: 1030px) {
+            left: 80px;
+            right: 80px;
+        }
+        @media screen and (max-width: 560px) {
+            top: 0px;
+            left: 25px;
+            right: 25px;
+        }
+        h1 {
+            @include fontWhite();
+            @include yuMincho();
+            font-size: 1.7rem;
+            font-weight: 600;
+            @media screen and (max-width: 560px) { 
+            line-height: 1.8;     
+            }
+        }
+        a {
+            @include pinkButtonLg();
+            @media screen and (max-width: 560px) {
+                padding: 1rem;  
+            }
+        }
+    }
+}
