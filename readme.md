@@ -1,3 +1,9 @@
+# WordPress theme especially created for a cafe.
+ 
+ This theme is especially designed for my client, but I made it practical to reuse.
+
+ Used WP starter theme Bones.
+
 # Bones
 A Lightweight Wordpress Development Theme
 
