@@ -11,7 +11,13 @@
                                 <div class="hero-img-wrapper">
                                     <div class="slider-contaner" id="slider">
                                         <div class="slides">
-                                            <div class="slide"><img src="<?php the_post_thumbnail('full'); ?>" alt=""> </div>
+                                            <div class="slide">
+                                                <?php 
+                                                $thumbnail_id = get_post_thumbnail_id( $post->ID );
+                                                $alt = get_post_meta($thumbnail_id, '_wp_attachment_image_alt', true);   
+                                                the_post_thumbnail( 'full', array( 'alt' => $alt ) );
+                                                ?>
+                                            </div>
                                         </div>
                                     </div>
                                     <div id="hero-description" class="hero-description">
@@ -56,7 +62,11 @@
                                         <div class="product" id="product-<?php echo $id ?>">
 
                                             <a class="product__image" href="<?php the_permalink(); ?>">
-                                                <?php the_post_thumbnail( 'full' );	?>
+                                                <?php
+                                                $thumbnail_id = get_post_thumbnail_id( $post->ID );
+                                                $alt = get_post_meta($thumbnail_id, '_wp_attachment_image_alt', true);   
+                                                the_post_thumbnail( 'full', array( 'alt' => $alt ) );
+                                                ?>
                                             </a>
 
                                             <h3 class="product__name">
@@ -121,7 +131,11 @@
                                         <div class="product" id="product-<?php echo $id ?>">
 
                                             <a class="product__image" href="<?php the_permalink(); ?>">
-                                                <?php the_post_thumbnail( 'full' );	?>
+                                                <?php
+                                                    $thumbnail_id = get_post_thumbnail_id( $post->ID );
+                                                    $alt = get_post_meta($thumbnail_id, '_wp_attachment_image_alt', true);   
+                                                    the_post_thumbnail( 'full', array( 'alt' => $alt ) );
+                                                ?>
                                             </a>
 
                                             <h3 class="product__name">

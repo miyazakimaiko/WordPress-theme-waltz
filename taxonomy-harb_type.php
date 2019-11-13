@@ -23,7 +23,11 @@
 							<article id="post-<?php echo $id ?>" role="article" class="product product-coffee">
 
 								<a class="product__image" href="<?php the_permalink() ?>">
-									<?php the_post_thumbnail( 'full' );	?>
+									<?php
+										$thumbnail_id = get_post_thumbnail_id( $post->ID );
+										$alt = get_post_meta($thumbnail_id, '_wp_attachment_image_alt', true);   
+										the_post_thumbnail( 'full', array( 'alt' => $alt ) );
+									?>
 								</a>
 
 								<h3 class="product__name">
