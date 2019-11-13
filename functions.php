@@ -191,7 +191,7 @@ function bones_register_sidebars() {
 	register_sidebar( array(
 		'name'          => esc_html__( '検索バー', 'waltz' ),
 		'id'            => 'sidebar-1',
-		'description'   => esc_html__( 'ここには検索フォーム以外、追加できません。', 'colors' ),
+		'description'   => esc_html__( 'ここには検索フォーム以外、追加できません。', 'waltz' ),
 		'before_widget' => '<section id="%1$s" class="%2$s">',
 		'after_widget'  => '</section>',
 	) );
@@ -325,7 +325,7 @@ class Custom_Walker_Banner_List extends Walker_Nav_Menu
     {
 		  $thumb_url = get_the_post_thumbnail_url($item);
         $output .= '<li class="banner-list">';
-        $item_output .= '<img src="'.$thumb_url.'" alt=""><a class="banner-description" href="'. $item->url .'"><h3>'. $item->title . '</h3></a><p>記事を読む</p>';
+        $item_output .= '<img src="'.$thumb_url.'" alt="'. $item->title . '"><a class="banner-description" href="'. $item->url .'"><h3>'. $item->title . '</h3></a><p>記事を読む</p>';
         $output .= apply_filters('walker_nav_menu_start_el',
                                   $item_output,
                                   $item,

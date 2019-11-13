@@ -17,7 +17,7 @@
 						<div class="contents-main-area flex-row-page">
                         <div class="flex-row-page__left">
                             <div class="google-map">
-                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.625425226139!2d135.62125421487426!3d34.61363219538482!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60012715cc3e38cf%3A0xc0970e5b9dce2910!2zV2F2ZWVlIOWFq-WwvuW4guOCpOOCv-ODquOCouODsw!5e0!3m2!1sen!2sie!4v1571242684586!5m2!1sen!2sie" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                                <iframe title="ワルツ珈琲店のグーグルマップ" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.625425226139!2d135.62125421487426!3d34.61363219538482!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60012715cc3e38cf%3A0xc0970e5b9dce2910!2zV2F2ZWVlIOWFq-WwvuW4guOCpOOCv-ODquOCouODsw!5e0!3m2!1sen!2sie!4v1571242684586!5m2!1sen!2sie" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
                             </div>
                         </div><!-- .flex-row-page__left -->
 
