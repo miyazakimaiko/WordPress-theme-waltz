@@ -116,25 +116,6 @@ function bones_gallery_style($css) {
 /*********************
 SCRIPTS & ENQUEUEING
 *********************/
-add_action('init', 'use_jquery_from_google');
-
-function use_jquery_from_google () {
-	if (is_admin()) {
-		return;
-	}
-
-	global $wp_scripts;
-	if (isset($wp_scripts->registered['jquery']->ver)) {
-		$ver = $wp_scripts->registered['jquery']->ver;
-                $ver = str_replace("-wp", "", $ver);
-	} else {
-		$ver = '1.12.4';
-	}
-
-	wp_deregister_script('jquery');
-	wp_register_script('jquery', "//ajax.googleapis.com/ajax/libs/jquery/$ver/jquery.min.js", true, $ver);
-}
-
 
 // loading modernizr and jquery, and reply script
 function bones_scripts_and_styles() {
@@ -167,12 +148,9 @@ function bones_scripts_and_styles() {
 
 		$wp_styles->add_data( 'bones-ie-only', 'conditional', 'lt IE 9' ); // add conditional wrapper around ie stylesheet
 
-		/*
-		I recommend using a plugin to call jQuery
-		using the google cdn. That way it stays cached
-		and your site will load faster.
-		*/
-
+		// Replace jquery script to Google CDN script
+		wp_deregister_script('jquery-core');
+		wp_register_script('jquery-core', 'https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js', false, false, true);
 		wp_enqueue_script( 'jquery' );
 		wp_enqueue_script( 'bones-js' );
 

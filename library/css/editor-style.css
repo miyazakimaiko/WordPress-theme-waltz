@@ -740,7 +740,7 @@ body#tinymce.wp-editor table {
 body#tinymce.wp-editor table caption {
   margin: 0 0 7px;
   font-size: 0.75em;
-  color: #B9B8B9;
+  color: #4b4b4b;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
@@ -777,7 +777,7 @@ body#tinymce.wp-editor blockquote {
   padding: 0 0 0 0.75em;
   border-left: 3px solid #2980b9;
   font-style: italic;
-  color: #B9B8B9;
+  color: #4b4b4b;
 }
 
 body#tinymce.wp-editor dd {

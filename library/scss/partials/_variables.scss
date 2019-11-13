@@ -30,7 +30,7 @@ $med-gray:          #D0CFD0;
 $med-gray-trans:    rgba(208, 208, 208, 0.8);
 $gray:              #eaedf2;
 $dark-gray:        #707d91;
-$meta-gray:         #B9B8B9;
+$meta-gray:         rgb(75, 75, 75);
 
 $tan:               #fefff5;
 
@@ -45,7 +45,7 @@ $link-hover:        darken($link-color, 9%);
 $border-color:      #ccc;
 $disabled-gray:     #cfcfcf;
 
-$pink-transparent:  rgba(183, 24, 93, 0.4);
+$pink-transparent:  rgba(183, 24, 93, 0.8);
 $pink-border-color: #FFB1B1;
 
 /*

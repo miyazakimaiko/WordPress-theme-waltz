@@ -376,14 +376,6 @@ body {
 NAVIGATION STYLES
 *********************/
 
-/*
-all navs have a .nav class applied via
-the wp_menu function; this is so we can
-easily write one group of styles for
-the navs on the site so our css is cleaner
-and more scalable.
-*/
-
 .nav {
 	border-bottom: 0;
 	margin: 0;
@@ -396,20 +388,8 @@ and more scalable.
 			text-decoration: none;
 			padding: 0.75em;
 
-			/*
-			remember this is for mobile ONLY, so there's no need
-			to even declare hover styles here, you can do it in
-			the style.scss file where it's relevant. We want to
-			keep this file as small as possible!
-			*/
 		}
 
-		/*
-		so you really have to rethink your dropdowns for mobile.
-		you don't want to have it expand too much because the
-		screen is so small. How you manage your menu should
-		depend on the project. Here's some great info on it:
-		http://www.alistapart.com/articles/organizing-mobile/
 		*/
 		ul.sub-menu,
 		ul.children {
@@ -465,9 +445,6 @@ POSTS & CONTENT STYLES
             flex-wrap: wrap;
             &__text {
                 width: 100%;
-                .price {
-                    
-                }
             }
             .product {
                 width: calc(100% / 2 - 6px);
@@ -716,7 +693,6 @@ COMMENT STYLES
 			display: block;
 			font-size: 0.9em;
 			font-style: italic;
-
 			a {
 				color: $meta-gray;
 				text-decoration: none;
@@ -917,7 +893,11 @@ SIDEBARS & ASIDES
             background-color:transparent;
             box-shadow: none;
             border: 1px solid $meta-gray;
+            color: $meta-gray;
             border-radius: 0;
+            :placeholder {
+                color: $meta-gray;
+            }
         }
         button {
             width: 20%;
@@ -952,10 +932,15 @@ SIDEBARS & ASIDES
         display: flex;
         flex-direction: column;
     }
+    .rpwe-time {
+        color: $meta-gray;
+    }
     a {
         font-size: 1.4rem !important;
         color: inherit;
-        margin: 5px;
+        display: flex;
+        height: 48px;
+        align-items: center;
         &:hover {
             color: $bones-pink;
         }
@@ -1064,6 +1049,13 @@ FOOTER STYLES
         &__inner {
             a {
                 color: inherit;
+            }
+        }
+        .menu-item {
+            a {
+                display: flex;
+                height: 48px;
+                align-items: center;
             }
         }
         .facebook-feed {

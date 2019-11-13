@@ -1769,13 +1769,6 @@ body {
 /*********************
 NAVIGATION STYLES
 *********************/
-/*
-all navs have a .nav class applied via
-the wp_menu function; this is so we can
-easily write one group of styles for
-the navs on the site so our css is cleaner
-and more scalable.
-*/
 .nav {
   border-bottom: 0;
   margin: 0;
@@ -1797,12 +1790,6 @@ and more scalable.
   color: #fff;
   text-decoration: none;
   padding: 0.75em;
-  /*
-			remember this is for mobile ONLY, so there's no need
-			to even declare hover styles here, you can do it in
-			the style.scss file where it's relevant. We want to
-			keep this file as small as possible!
-			*/
 }
 
 .nav li ul.sub-menu li a,
@@ -1998,7 +1985,7 @@ POSTS & CONTENT STYLES
   margin-right: auto;
   color: #FFF;
   text-decoration: none;
-  background: rgba(183, 24, 93, 0.4);
+  background: rgba(183, 24, 93, 0.8);
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -2170,7 +2157,7 @@ COMMENT STYLES
 }
 
 .comment .vcard time a {
-  color: #B9B8B9;
+  color: #4b4b4b;
   text-decoration: none;
 }
 
@@ -2251,7 +2238,7 @@ COMMENT FORM STYLES
 }
 
 .logged-in-as {
-  color: #B9B8B9;
+  color: #4b4b4b;
   font-style: italic;
   margin: 0;
 }
@@ -2381,14 +2368,15 @@ SIDEBARS & ASIDES
   background-color: transparent;
   -webkit-box-shadow: none;
           box-shadow: none;
-  border: 1px solid #B9B8B9;
+  border: 1px solid #4b4b4b;
+  color: #4b4b4b;
   border-radius: 0;
 }
 
 .sidebar .search-bar button {
   width: 20%;
   background-color: rgba(183, 24, 93, 0.2);
-  color: #B9B8B9;
+  color: #4b4b4b;
   border: none;
   cursor: pointer;
   outline: none;
@@ -2428,10 +2416,20 @@ SIDEBARS & ASIDES
           flex-direction: column;
 }
 
+.sidebar .rpwe-time {
+  color: #4b4b4b;
+}
+
 .sidebar a {
   font-size: 1.4rem !important;
   color: inherit;
-  margin: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 48px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .sidebar a:hover {
@@ -2514,7 +2512,7 @@ BANNER STYLES
   margin-right: auto;
   color: #FFF;
   text-decoration: none;
-  background: rgba(183, 24, 93, 0.4);
+  background: rgba(183, 24, 93, 0.8);
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -2598,6 +2596,16 @@ FOOTER STYLES
 
 .footer__contents__inner a {
   color: inherit;
+}
+
+.footer__contents .menu-item a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 48px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .footer__contents .facebook-feed {
@@ -2815,13 +2823,6 @@ SIDEBARS & ASIDES
   .widget {
     padding: 0 10px;
     margin: 2.2em 0;
-  }
-  .widget ul li {
-    margin-bottom: 0.75em;
-  }
-  .widget ul li ul {
-    margin-top: 0.75em;
-    padding-left: 1em;
   }
   /*********************
 BANNER LISTS
