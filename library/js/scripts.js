@@ -1,37 +1,17 @@
-/*
- * Bones Scripts File
- * Author: Eddie Machado
- *
- * This file should contain any js scripts you want to add to the site.
- * Instead of calling it in the header or throwing it inside wp_head()
- * this file will be called automatically in the footer so as not to
- * slow the page load.
- *
- * There are a lot of example functions and tools in here. If you don't
- * need any of it, just remove it. They are meant to be helpers and are
- * not required. It's your world baby, you can do whatever you want.
-*/
-
-
 // TOGGLE NAV MENU ANIMATION
+const toggleMenu = (button, menu) => {
+    button.addEventListener("click", () => {
+        menu.classList.toggle("open");
+        button.classList.toggle("cross");
+    });  
+}
+
 const menuTrigger = document.querySelector(".menu-trigger");
 const headerNav = document.querySelector(".header-nav");
+toggleMenu(menuTrigger, headerNav);
 
-window.onload = () => {
-    menuTrigger.addEventListener("click", () => {
-        headerNav.classList.toggle("open");
-        menuTrigger.classList.toggle("cross");
-    });    
-}
 
-// HEADER SHRINK ANIMATION
-window.onscroll = () => {
-    headerShrink();
-}
-function headerShrink() {
-    const pos1 = document.documentElement.scrollTop;
-    const pos2 = document.body.scrollTop;
-    const header = document.querySelector(".header");
+const headerShrink = (pos1, pos2, header) => {
     if( pos1 > (window.innerHeight/2) || pos2 > (window.innerHeight/2) ) {
         header.classList.add("fixed");
     } else {
@@ -44,9 +24,17 @@ function headerShrink() {
     }
 }
 
-/*
- * Put all your regular jQuery in here.
-*/
+// HEADER SHRINK ANIMATION
+window.onscroll = () => {
+    const pos1 = document.documentElement.scrollTop;
+    const pos2 = document.body.scrollTop;
+    const header = document.querySelector(".header");
+    headerShrink(pos1, pos2, header);
+}
+
+
+
+
 jQuery(document).ready(function($) {
 
     var h = $(window).height(); //ブラウザウィンドウの高さを取得
