@@ -15,7 +15,7 @@
 
 					<div class="contents-section__inner">
 						<div class="eyecatch">
-							<?php the_post_thumbnail('full'); ?>
+							<?php the_post_thumbnail('waltz-thumb-560'); ?>
 						</div>
 					</div>
 					<div class="contents-section__inner">

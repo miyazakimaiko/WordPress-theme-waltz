@@ -15,7 +15,7 @@
                                                 <?php 
                                                 $thumbnail_id = get_post_thumbnail_id( $post->ID );
                                                 $alt = get_post_meta($thumbnail_id, '_wp_attachment_image_alt', true);   
-                                                the_post_thumbnail( 'full', array( 'alt' => $alt ) );
+                                                the_post_thumbnail( 'waltz-thumb-1280', array( 'alt' => $alt ) );
                                                 ?>
                                             </div>
                                         </div>
@@ -65,7 +65,7 @@
                                                 <?php
                                                 $thumbnail_id = get_post_thumbnail_id( $post->ID );
                                                 $alt = get_post_meta($thumbnail_id, '_wp_attachment_image_alt', true);   
-                                                the_post_thumbnail( 'full', array( 'alt' => $alt ) );
+                                                the_post_thumbnail( 'waltz-thumb-230', array( 'alt' => $alt ) );
                                                 ?>
                                             </a>
 
@@ -134,7 +134,7 @@
                                                 <?php
                                                     $thumbnail_id = get_post_thumbnail_id( $post->ID );
                                                     $alt = get_post_meta($thumbnail_id, '_wp_attachment_image_alt', true);   
-                                                    the_post_thumbnail( 'full', array( 'alt' => $alt ) );
+                                                    the_post_thumbnail( 'waltz-thumb-230', array( 'alt' => $alt ) );
                                                 ?>
                                             </a>
 
