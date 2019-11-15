@@ -25,7 +25,7 @@
                 </header> <?php // end article header ?>
 
                 <div class="eyecatch">
-                  <?php the_post_thumbnail( 'full' ); ?>
+                  <?php the_post_thumbnail( 'waltz-thumb-560' ); ?>
                 </div>
                 
                 <section class="entry-content" itemprop="articleBody">

@@ -13,7 +13,7 @@
                     <li class="banner-list">
                         <?php
                         if ( has_post_thumbnail() ) {
-                        the_post_thumbnail('large');
+                        the_post_thumbnail('waltz-thumb-380');
                         } else {
                         echo '<img src="' . esc_url( get_template_directory_uri() ) . '/img/noimg.png" alt="">';
                         }
