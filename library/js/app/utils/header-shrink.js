@@ -1,7 +1,4 @@
-function headerShrink() {
-    const pos1 = document.documentElement.scrollTop;
-    const pos2 = document.body.scrollTop;
-    const header = document.querySelector(".header");
+const headerShrink = (pos1, pos2, header) => {
     if( pos1 > (window.innerHeight/2) || pos2 > (window.innerHeight/2) ) {
         header.classList.add("fixed");
     } else {
