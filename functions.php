@@ -101,15 +101,21 @@ add_action( 'wp_enqueue_scripts', 'waltz_scripts' );
 /************* OEMBED SIZE OPTIONS *************/
 
 if ( ! isset( $content_width ) ) {
-	$content_width = 680;
+	$GLOBALS['content_width'] = 1280;
 }
 
 /************* THUMBNAIL SIZE OPTIONS *************/
 
-// Thumbnail sizes
-add_image_size( 'bones-thumb-600', 600, 150, true );
-add_image_size( 'bones-thumb-300', 300, 100, true );
-
+function wpse_setup_theme(){
+  // Thumbnail sizes
+  add_theme_support( 'post-thumbnails' );
+  add_image_size( 'waltz-thumb-1280', 1280, 400, true );
+  add_image_size( 'waltz-thumb-800', 800, 390, true );
+  add_image_size( 'waltz-thumb-560', 560, 350, true );
+  add_image_size( 'waltz-thumb-380', 380, 200, true );
+  add_image_size( 'waltz-thumb-230', 230, 180, true );
+}
+add_action( 'after_setup_theme', 'wpse_setup_theme' );
 /*
 to add more sizes, simply copy a line from above
 and change the dimensions & name. As long as you
@@ -122,7 +128,7 @@ inside the thumbnail function.
 
 For example, to call the 300 x 100 sized image,
 we would use the function:
-<?php the_post_thumbnail( 'bones-thumb-300' ); ?>
+<?php the_post_thumbnail( 'waltz-thumb-380' ); ?>
 for the 600 x 150 image:
 <?php the_post_thumbnail( 'bones-thumb-600' ); ?>
 
@@ -134,8 +140,11 @@ add_filter( 'image_size_names_choose', 'bones_custom_image_sizes' );
 
 function bones_custom_image_sizes( $sizes ) {
     return array_merge( $sizes, array(
-        'bones-thumb-600' => __('600px by 150px'),
-        'bones-thumb-300' => __('300px by 100px'),
+        'waltz-thumb-1280' => __('1280px by 400px'),
+        'waltz-thumb-800' => __('800px by 390px'),
+        'waltz-thumb-560' => __('560px by 350px'),
+        'waltz-thumb-380' => __('380px by 200px'),
+        'waltz-thumb-230' => __('230px by 180px'),
     ) );
 }
 
