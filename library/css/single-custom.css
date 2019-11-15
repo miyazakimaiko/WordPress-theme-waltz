@@ -1,14 +1,2 @@
-.contents-section__inner .eyecatch img {
-  height: 220px;
-  max-width: 600px;
-  margin: 0 auto;
-  display: block;
-  border: 20px solid lightgrey;
-}
-
-@media only screen and (min-width: 768px) {
-  .contents-section__inner .eyecatch img {
-    height: 390px;
-  }
-}
+.contents-section__inner .eyecatch img{height:220px;max-width:600px;margin:0 auto;display:block;border:20px solid lightgrey}@media only screen and (min-width: 768px){.contents-section__inner .eyecatch img{height:390px}}
 /*# sourceMappingURL=single-custom.css.map */
